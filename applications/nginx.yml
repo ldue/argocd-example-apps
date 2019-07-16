@@ -18,4 +18,4 @@ spec:
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
-    namespace: apache-webserver
+    namespace: apache
