@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-webserver
+  name: apache-webserver
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
 spec:
@@ -11,11 +11,11 @@ spec:
   source:
     repoURL: https://github.com/ldue/argocd-example-apps.git
     targetRevision: HEAD
-    path: ressources/nginx
+    path: ressources/apache
     # directory
     directory:
       recurse: true
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx
+    namespace: apache
