@@ -1,20 +1,20 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: ngnix-webserver
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: ngnix-webserver
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: ngnix-webserver
     spec:
       containers:
-      - image: nginx
-        name: guestbook-ui
+      - image: ngnix
+        name: ngnix-webserver
         ports:
         - containerPort: 80
