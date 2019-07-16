@@ -1,20 +1,20 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: ngnix-webserver
+  name: nginx-webserver
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: ngnix-webserver
+      app: nginx-webserver
   template:
     metadata:
       labels:
-        app: ngnix-webserver
+        app: nginx-webserver
     spec:
       containers:
-      - image: ngnix
-        name: ngnix-webserver
+      - image: nginx
+        name: nginx-webserver
         ports:
         - containerPort: 80

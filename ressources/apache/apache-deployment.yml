@@ -14,7 +14,7 @@ spec:
         app: apache-webserver
     spec:
       containers:
-      - image: apache
+      - image: httpd
         name: apache-webserver
         ports:
         - containerPort: 80
