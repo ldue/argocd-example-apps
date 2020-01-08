@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+spec:
+  project: default
+  syncPolicy:
+    automated: {}
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/ldue/argocd-example-apps.git
+    targetRevision: HEAD
