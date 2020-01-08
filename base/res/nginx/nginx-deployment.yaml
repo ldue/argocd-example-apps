@@ -1,44 +1,6 @@
-apiVersion: ENC[AES256_GCM,data:fnv0QwCEA6BR23kv,iv:Au4lSckNRy1f/B5hDDgYGhxcsCH7ecPTD3P+5s4xRDU=,tag:yof7pfqRnGBwfFKdTk/6EQ==,type:str]
-kind: ENC[AES256_GCM,data:ocyHec9YyNWLBA==,iv:0fYi9Smq85R+SxPud4Huukqp+uLmbhlxCzPYWJ+jLZI=,tag:UCONk13Hq6MXSk/Uzo/VIQ==,type:str]
+apiVersion: viaduct.ai/v1
+kind: ksops
 metadata:
-    name: ENC[AES256_GCM,data:+fSv7r+Q4lku1DAGIg7D,iv:WU4XCsSlyV4kOy3WiwPO1BaQGU3fsL/EffcEx73LFxA=,tag:PjywM9fpKy2tfMyYCzSTBQ==,type:str]
-spec:
-    replicas: ENC[AES256_GCM,data:Ng==,iv:g8+gB3xUmYopiESWuH+jL0QT4pBM4SynWgXZTrhVkv8=,tag:BksrmWfoVXr6MwyNyhD0Eg==,type:int]
-    revisionHistoryLimit: ENC[AES256_GCM,data:4Q==,iv:gB+wwqb4VuwdXcAsZzNmwEwbEQbUMwTR1waglw7fGzg=,tag:iw2s99kP/vml0C1hoVl2yg==,type:int]
-    selector:
-        matchLabels:
-            app: ENC[AES256_GCM,data:gOXe2mnfPA7XdItD9SmF,iv:R+1jKfXNpr84JZJw7gWbQ/6l9SyDe1YO4pWg70wXz20=,tag:aWtMmcWcCti+BqcPQrTW6g==,type:str]
-    template:
-        metadata:
-            labels:
-                app: ENC[AES256_GCM,data:fKqbaJ3T6v8HZoZSGx6/,iv:ghJOPFYkAujOJY/E/luRetpEcBswUnV/8zIuiA9I+B8=,tag:5XMQHgHZ7jfFElCSQGLRyw==,type:str]
-        spec:
-            containers:
-            -   image: ENC[AES256_GCM,data:4yFNpFA=,iv:qmiHz6xooQnwANsbEn2oTrXnYDpkIZpLS+T0snHNzjA=,tag:bvfRADUqb7P/+/b2CHlLWA==,type:str]
-                name: ENC[AES256_GCM,data:38/4KGE839sS++VOoINa,iv:MZNcTfQdVRbKUDxbd1lIoUnjrbdHIpgWizBT73BEtCA=,tag:wskFE+Mtg7O1UvY0F73qrw==,type:str]
-                ports:
-                -   containerPort: ENC[AES256_GCM,data:i1M=,iv:uSKahN3DTf0RHw88vcGeyGOmQpzsc9xkyBmCxdD/+to=,tag:nScy5rn7eAVlAID3kionyw==,type:int]
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    lastmodified: '2020-01-08T08:39:01Z'
-    mac: ENC[AES256_GCM,data:hcndnrklrgk+6BBL5v13HxBmOns7wTiMqm5Yobo36wncqBW+RCEJF2oVONYFQSBeVzJthK5cMcN3lAxkYAtQqFav/sGx8kj7TGK9spXrJUyjDAA123o7j+fHBZjulDkALm8e3ljVTB14BeR0TYw1hwwtVYru1chCLNI4CoDhTA0=,iv:IfqmKucscshNJzqvpbJ/uoczSBA4c/g5aKVK0dh+/38=,tag:xF8iKkBWTC9kaez7R5BjYg==,type:str]
-    pgp:
-    -   created_at: '2020-01-08T08:38:10Z'
-        enc: |
-            -----BEGIN PGP MESSAGE-----
-
-            hQEMA1F+SjipM06IAQf/ZTVzlqo4qX2MbtVNoQ7bgH3s5P1bYFul+5VUUbfvAZDr
-            G123/rUX3eZY5zWFehhN7ZOv8VyB6WEDCUmtg05mIRyBn5Pxnu3jVZDE5Cb4HysN
-            UnXwe8cO+YJLJGgE7RJbA6ISMxir+eml309U+QKxOxtEAoakLmRiMYW12+pKQuiF
-            Zgl7W8Lu0kEtOXvH2WRvLY00uDylSsPY9wSs35pqPlFlj6TD2GpNi8XpYmLVFUyF
-            oBBxtCYiUXYI95xPtOVXFToZhhmdDRA9DCxCTUheOzBRbtT/S/AITJ3dxnkQYaSN
-            xafttgbBPpbmVMnURMZeue0Y8+1dFAG14MEbKvsYPNJeASRF7CSHQN09lW8FdDsF
-            PNH07VyPKPjtdBlYNmGAzbVpH3KwrQoi5rMmoNlO2J2nLkJAh1edcTuQyZMZ7IbZ
-            IsX4Xg0h7+q7LOTndpYlEk6WZa9AA6BA/2835BD9iw==
-            =DwdN
-            -----END PGP MESSAGE-----
-        fp: BB00448FB15EE8526FB1A4A46FE4F6879704BF7C
-    unencrypted_suffix: _unencrypted
-    version: 3.5.0
+  name: example-secret-generator
+files:
+  - ./nginx-deployment.enc.yaml
