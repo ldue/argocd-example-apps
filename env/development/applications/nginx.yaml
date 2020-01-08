@@ -3,10 +3,11 @@ kind: Application
 metadata:
   name: nginx
 spec:
-  project: default
   syncPolicy:
-    automated: {}
-  destination:
-    server: https://kubernetes.default.svc
+    automated:
+      prune: true
   source:
     path: env/development/res/nginx
+    targetRevision: HEAD
+  destination:
+    namespace: nginx
