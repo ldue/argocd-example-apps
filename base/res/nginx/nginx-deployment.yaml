@@ -3,4 +3,4 @@ kind: ksops
 metadata:
   name: example-secret-generator
 files:
-  - ./nginx-deployment.enc.yaml
+  - ./nginx-vault.enc.yaml
